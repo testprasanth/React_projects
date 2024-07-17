@@ -1,0 +1,28 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color:#7339b1;
+}
+
+.container {
+  padding: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+button{
+  background-color: #dcece3;
+  padding: 10px 20px;
+
+
+}

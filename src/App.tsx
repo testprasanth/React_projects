@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { SkillsProvider } from './context/SkillsContext';
+import Header from './components/Header';
+import GetSkills from './components/GetSkills';
+import AddSkills from './components/AddSkills';
+import styles from './styles/App.module.css'; // Correct path
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App: React.FC = () => {
+    const [showSkills, setShowSkills] = useState(false);
+    const [showAddSkills, setShowAddSkills] = useState(false);
+
+    return (
+        <SkillsProvider>
+            <Header
+                onGetSkills={() => { setShowSkills(true); setShowAddSkills(false); }}
+                onAddSkills={() => { setShowAddSkills(true); setShowSkills(false); }} />
+            <div className={styles.container}>
+                {showSkills && <GetSkills />}
+                {showAddSkills && <AddSkills />}
+            </div>
+        </SkillsProvider>
+    );
+};
 
 export default App;

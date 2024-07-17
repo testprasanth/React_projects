@@ -1,0 +1,32 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Space between inputs */
+    max-width: 400px; /* Set a max width for the form */
+    margin: 0 auto; /* Center the form */
+    padding: 1rem;
+    border: 1px solid #ddd; /* Optional: border around the form */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #f9f9f9; /* Light background */
+}
+
+.input {
+    padding: 10px;
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Slightly rounded corners */
+    font-size: 16px; /* Increase font size */
+}
+
+.button {
+    background-color: #7339b1; /* Button color */
+    color: white; /* Text color */
+    padding: 10px 15px; /* Button padding */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer on hover */
+    font-size: 16px; /* Button font size */
+}
+
+.button:hover {
+    background-color: #5a2b8a; /* Darker shade on hover */
+}
